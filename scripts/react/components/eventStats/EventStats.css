@@ -1,0 +1,10 @@
+.event-status-container{
+    width:95vw;
+    max-width:1000px;
+    margin:auto;
+    padding-top:5rem;
+}
+.event-status-tickets h1{
+    font-size:2rem;
+    margin: 3rem auto;
+}

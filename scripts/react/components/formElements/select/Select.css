@@ -1,0 +1,22 @@
+.select{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.select{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+.select select{
+    padding: 1rem;
+    border:1px solid rgba(255, 217, 0, 0.8);
+    width: 250px;
+}
+.select select:focus{
+    outline:none;
+    border-color: gold;
+}
+.select option{
+    padding:0.5rem 0.5rem;
+    font-size:1rem;
+}

@@ -1,0 +1,22 @@
+#upcoming-events .gallery {
+    width: auto;
+    margin-bottom: 3.5rem;
+}
+
+#upcoming-events .gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    float: left;
+}
+
+#upcoming-events .gallery:hover {
+    border: 1px solid goldenrod;
+}
+
+#upcoming-events .gallery img {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: auto;
+}

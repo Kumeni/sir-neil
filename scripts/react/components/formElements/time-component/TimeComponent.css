@@ -1,0 +1,19 @@
+.time{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.time{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+.time input{
+    width:170px;
+    padding:1rem 2rem;
+    border:1px solid rgba(255, 217, 0, 0.6);
+    border-radius: 30px;
+}
+.time input:focus{
+    outline: none;
+    border:1px solid rgba(255, 217, 0, 1);
+}

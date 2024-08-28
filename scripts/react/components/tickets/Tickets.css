@@ -1,0 +1,68 @@
+.orders-container table{
+    width:max-content;
+}
+.orders-container td{
+    max-width:300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.orders-container{
+    position:relative;
+    width:90vw;
+    max-width:984px;
+    white-space: nowrap;
+    margin:auto;
+    margin-bottom:5rem;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgb(120, 120, 120);
+}
+.orders-container table{
+    border-collapse: collapse;
+    padding:0rem 1rem;
+}
+.orders-table-container{
+    width:100%;
+    position:relative;
+    z-index: 2;
+}
+.orders-table-container{
+    overflow:auto;
+}
+.orders-table-head th{
+    padding:1.5rem 0rem;
+}
+.order td:last-of-type{
+    padding:0.5rem 1rem;
+}
+.order td:not(:last-of-type){
+    padding:1.3rem 2rem;
+}
+.order{
+}
+.order:nth-of-type(even){
+    background-color: rgb(240, 240, 240);
+}
+.order button{
+    padding:0.5rem 1rem;
+    background-color: white;
+    border:1px solid rgb(120, 120, 120);
+}
+.orders-table-container tr td:first-of-type, .orders-table-container tr th:first-of-type{
+    position: sticky;
+    left: 0px;
+    z-index:2000;
+}
+.orders-table-container tr:nth-of-type(even) td:first-of-type, .orders-table-container tr:nth-of-type(even) th:first-of-type{
+    background-color: rgb(240, 240, 240);
+}
+.orders-table-container tr:nth-of-type(odd) td:first-of-type, .orders-table-container tr:nth-of-type(odd) th:first-of-type{
+    background-color: white;
+}
+.order:hover .order td:first-of-type, .order:hover th:first-of-type:hover{
+    background-color: gold;
+}
+.order:hover{
+    cursor: pointer;
+    background-color: gold !important;
+}

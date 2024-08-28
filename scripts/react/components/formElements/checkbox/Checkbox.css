@@ -1,0 +1,11 @@
+.checkbox{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.checkbox{
+    grid-template-columns: auto auto;
+}
+.checkbox label{
+    margin:0.5rem 0.5rem 0.5rem 0.5rem;
+}

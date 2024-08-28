@@ -1,0 +1,60 @@
+.payment-receipt-container{
+    border:1px solid rgb(180, 180, 180);
+    padding: 3rem;
+}
+.payment-receipt-container h1{
+    text-align: center;
+    margin-bottom:2rem;
+}
+.payment-receipt-container h2{
+    text-align: center;
+}
+.payment-receipt-payee, .payment-receipt-payer, 
+.payment-receipt-payer > div:nth-of-type(2),
+.payment-receipt-total{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.payment-receipt-payee{
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    margin-bottom:3rem;
+}
+.payment-receipt-payee > img{
+    background-color: rgb(70, 70, 70);
+    height:150px;
+    margin-bottom:1rem;
+}
+.payment-receipt-payee a{
+    display: block;
+    width:max-content;
+    margin:0.2rem 0rem;
+}
+.payment-receipt-payer{
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    padding-bottom:2rem;
+    border-bottom:2px solid rgb(60, 60, 60);
+}
+.payment-receipt-payer > div:first-of-type > p:first-of-type{
+    margin-bottom:0.5rem;
+    font-size:1.1rem;
+}
+.payment-receipt-payer > div:nth-of-type(2){
+    grid-template-columns: auto auto;
+    column-gap:1rem;
+    align-self: bottom;
+}
+.payment-receipt-payer > div:nth-of-type(2) > p{
+    padding-bottom:0rem;
+}
+.payment-receipt-total{
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    padding:2rem 0rem;
+}
+.payment-receipt-total > p{
+    font-size:1.2rem;
+
+}

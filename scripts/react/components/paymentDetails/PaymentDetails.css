@@ -1,0 +1,10 @@
+.payment-receipt-payer{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+
+.payment-receipt-payer{
+    grid-template-columns: repeat(2, auto);
+    column-gap:2rem;
+}
