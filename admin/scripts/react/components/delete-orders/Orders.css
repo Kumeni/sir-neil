@@ -1,0 +1,81 @@
+.orders-container table{
+    width:max-content;
+}
+.orders-container td{
+    max-width:300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.orders-container{
+    position:relative;
+    width:90vw;
+    max-width:1000px;
+    white-space: nowrap;
+    margin:auto;
+    margin-bottom:5rem;
+    display: grid;
+    grid-template-columns: auto 113px;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgb(120, 120, 120);
+}
+.orders-container table{
+    border-collapse: collapse;
+    padding:0rem 1rem;
+}
+.orders-table-container{
+    width:100%;
+    position:relative;
+    z-index: 2;
+}
+.orders-table-container{
+    overflow:auto;
+}
+.orders-table-container-delivered{
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+.orders-table-container tr th:last-of-type{
+    display: inline-block;
+    width:0px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.orders-table-container tr td:last-of-type{
+    width:0px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.orders-table-container-delivered tr td:last-of-type{
+    padding:0rem 1.5rem;
+}
+.orders-table-container-delivered tr th:not(:last-of-type),
+.orders-table-container-delivered tr td:not(:last-of-type){
+    visibility:hidden;
+}
+.orders-table-container-delivered,
+.orders-table-container-delivered table{
+    z-index: 0;
+}
+.orders-table-head th{
+    padding:1.5rem 0rem;
+}
+.order td:not(:last-of-type){
+    padding:1.3rem 2rem;
+}
+.order:nth-of-type(even){
+    background-color: rgb(240, 240, 240);
+}
+.orders-table-container tr td:first-of-type, .orders-table-container tr th:first-of-type{
+    position: sticky;
+    left: 0px;
+    z-index:2000;
+}
+.orders-table-container tr:nth-of-type(even) td:first-of-type, .orders-table-container tr:nth-of-type(even) th:first-of-type{
+    background-color: rgb(240, 240, 240);
+}
+.orders-table-container tr:nth-of-type(odd) td:first-of-type, .orders-table-container tr:nth-of-type(odd) th:first-of-type{
+    background-color: white;
+}

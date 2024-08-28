@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir Neil</title>
+    <link rel="icon" type="image/x-icon" href="../images/sir-neil-logo-golden-transparent-cropped.png">
+
+    <link rel="stylesheet" href="./styles/page-layout.css">
+    <link rel="stylesheet" href="../styles/checkout.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <section id="landing-page">
+        <div id="menu-section">
+            <ul>
+                <li class="active"><a href="./index.html">Events</a></li>
+                <li><a href="./orders.html">Orders</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="upcoming-events"></section>
+
+    <script>
+        const promptSignIn = () => {
+            tickets = [];
+            let googleSignin = document.getElementsByClassName("google-sign-in")[0]; 
+            /**
+             * If the user isn't signed in, prompt signing in immediately;
+             */
+
+            let credential = sessionStorage.getItem("credential");
+            if(credential == "" || credential == null){
+                /**
+                 * Show the google signin on the popup
+                 */
+                //initiateGoogleSignin();
+                signedIn = false;
+                document.getElementsByClassName("popup")[0].style.display = "block";
+                document.getElementsByTagName("body")[0].style.overflow = "hidden";
+                googleSignin.style.display = "block";
+            } else {
+                googleSignin.style.display = "none";
+                signedIn = true;
+                document.getElementsByTagName("body")[0].style.overflow = "auto";
+                document.getElementsByClassName("popup")[0].style.display = "none";
+            } 
+        }
+    </script>
+    <script>
+        /**
+         * I need to write a script whereby; if the user isn't signed in
+         * 1. A popup should occur that prompts them to sign in
+         */
+        const userSignIn = setInterval(() => {
+            let credential = sessionStorage.getItem("credential");
+            if(credential == "" || credential == null){
+                signedIn = false;
+                promptSignIn();
+            }
+        }, 1000);
+
+        /**
+         * If the user is signed in
+         * 2. Fetch all the tickets the user bought and display them
+         */
+
+    </script>
+
+    <section class="popup">
+        <div>
+            <!-- <div class="close">
+                <span onclick="handlePopup(false)">&times;</span>
+            </div> -->
+            <div class="google-sign-in">
+                <div class="g_id_signin" data-type="standard"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function onSignIn(jwt){
+            sessionStorage.setItem("credential", jwt.credential);
+            
+            //get the tickets belonging to this user;
+            signedIn = true;
+            promptSignIn();
+            //getTickets();
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+    </script>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+        data-client_id="86537079534-penkko2851ln147m7dlqnub71h1r7ph4"
+        data-callback="onSignIn">
+    </div>
+    <footer class="section-p1">
+        <div class="col col-1">
+            <img src="../images/sir-neil-logo-realgold-transp-cropped.png" alt="" class="logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> sirneil@gmail.com</p>
+            <p><strong>Phone:</strong> 0712345678</p>
+            <!-- <p><strong>Delivery Hours:</strong>10:00am - 6:00pm</p> -->
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i onclick="window.location.href='https://www.instagram.com/sir.neilofficial/'"
+                        class="fab fa-instagram"></i>
+                    <i onclick="window.location.href='https://www.youtube.com/results?search_query=sir+neil'"
+                        class="fab fa-youtube"></i>
+                    <i class="fab fa-spotify"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col2">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <!-- <a href="contact.html">Delivery Information</a> -->
+            <a href="#">Terms and Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col col3">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="contact.html">Help</a>
+        </div>
+
+        <div class="col install">
+            <!-- <h4>Install App</h4>
+                <p>From App Store or Google Play </p>
+                <div class="row">
+                    <img src="img/pay/app.jpg" alt="">
+                    <img src="img/pay/play.jpg" alt="">
+                </div> -->
+            <h4>secured payment gateways:</h4>
+            <p>Pay via VISA card</p>
+            <img class="footer-pay-img" src="../images/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p> Copyright &copy; Sir Neil 
+                <script>document.write(new Date().getFullYear())</script>; 
+            </p>
+            <p>All Rights Reserved</p>
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <!-- <script src="../script.js"></script> -->
+
+    <!-- Loading dependencies i.e react babel and axios :) -->
+    <script src="./scripts/react/react.js"></script>
+    <script src="./scripts/react/react-dom.js"></script>
+    <script src="./scripts/babel/babel.min.js"></script>
+    <script src="./scripts/axios/axios.min.js"></script>
+    <script src="./scripts/validatorjs/validator.min.js"></script>
+    
+
+    <!-- Loading the react components -->
+    <script src="../scripts/utilities/date.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/delete/Delete.css" />
+    <script src="../scripts/react/components/delete/Delete.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/formElements/time-component/TimeComponent.css" />
+    <script src="../scripts/react/components/formElements/time-component/TimeComponent.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/formElements/date-component/DateComponent.css" />
+    <script src="../scripts/react/components/formElements/date-component/DateComponent.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/formElements/textarea/Textarea.css" />
+    <script src="../scripts/react/components/formElements/textarea/Textarea.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/imageUpload/ImageUpload.css" />
+    <script src="../scripts/react/components/imageUpload/UploadedImagePreview.js" type="text/babel"></script>
+    <script src="../scripts/react/components/imageUpload/ImageUpload.js" type="text/babel"></script>
+
+    
+    <link rel="stylesheet" href="../scripts/react/components/formElements/input/Input.css" />
+    <script src="../scripts/react/components/formElements/input/Input.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/popup/Popup.css" />
+    <script src="../scripts/react/components/popup/Popup.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/upcomingEvents/Events.css" />
+    <script src="../scripts/react/components/upcomingEvents/Event.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/upcomingEvents/EditEvent.css" />
+    <script src="../scripts/react/components/upcomingEvents/EditEvent.js" type="text/babel"></script>
+
+    <link rel="stylesheet" href="../scripts/react/components/upcomingEvents/UpcomingEvents.css" />
+    <script src="../scripts/react/components/upcomingEvents/UpcomingEvents.js" type="text/babel"></script>
+</body>
+
+</html>

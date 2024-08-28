@@ -1,0 +1,23 @@
+.input{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.input{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.input input{
+    font-size:1rem;
+    font-weight:300;
+    padding:1.1rem 1.5rem;
+    border-radius:35px;
+    border:1px solid rgba(255, 217, 0, 0.6);
+    transition: border-color 1s;
+    width:400px;
+}
+.input input:focus{
+    border-color: gold;
+    outline: none;
+}

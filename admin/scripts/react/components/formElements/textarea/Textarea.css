@@ -1,0 +1,23 @@
+.textarea{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.textarea{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+.textarea textarea{
+    border:1px solid rgba(255, 217, 0, 0.8);
+    width:600px;
+    height: 150px;
+    padding: 2rem 1.5rem;
+    border-radius: 35px;
+    transition: border-color 1s;
+    font-size:1rem;
+    font-weight: 300;
+}
+.textarea textarea:focus{
+    outline: none;
+    border-color: gold;
+}

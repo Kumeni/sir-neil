@@ -1,0 +1,51 @@
+.order-title, .order-product{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.order{
+    margin-top:2rem;
+    min-width:600px;
+}
+.order-title{
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-content: center;
+}
+.order-title h3{
+    align-self: center;
+}
+.order-title span{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.order-product{
+    grid-template-columns: max-content auto;
+    column-gap:1.5rem;
+    align-content: center;
+    margin-left:2rem;
+}
+.order-product-title, .order-delivery-title{
+    margin:2rem 0rem;
+}
+.order-delivery-title{
+    margin: 2rem 0rem 1rem 0rem;
+}
+.order-delivery-details td{
+    padding:0.8rem 1rem !important;
+}
+.order-product-image{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.order-product > div > p{
+    margin-bottom:0rem;
+    margin-top:0.8rem;
+    font-weight: 400;
+    color: black;
+}
+.order-transaction-title{
+    margin:2rem 0rem 1rem 0rem;
+}

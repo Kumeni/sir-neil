@@ -1,0 +1,690 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#splash {
+    height: 150vh;
+    position: fixed;
+    /* background-color: #000; */
+    background-image: url(images/concert-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    z-index: 6;
+    overflow-y: hidden;
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-none {
+    display: none;
+}
+
+#splash img {
+    height: 15rem;
+    width: 15rem;
+    /* border-radius: 100%; */
+}
+
+#splash h4 {
+    padding: 1rem;
+
+}
+/* section:not(#splash){
+    display: none;
+} */
+
+
+#landing-page {
+    background-image: url(images/background.jpg);
+    /* Center the image */
+    /* background-position: center;  */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    /* height: 100vh; */
+}
+
+#landing-page #menu-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    z-index: 4;
+    background-color: black;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.black {
+    background-color: #000;
+}
+
+#landing-page #menu-section ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#landing-page #menu-section ul li {
+    list-style: none;
+    /* padding: 0 2rem; */
+    margin: 0 2rem;
+    /* display: inline-block; */
+    position: relative;
+}
+
+#landing-page #menu-section ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#landing-page #menu-section ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+#landing-page #menu-section ul li.active::after,
+#landing-page #menu-section ul li:hover::after {
+    width: 100%;
+}
+
+
+
+#landing-page #landing-section {
+    padding: 7rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing-page #landing-section .logo-section {
+    padding: 0 2rem;
+}
+
+#landing-page #landing-section .logo-section img {
+    /* border-radius: 100%; */
+    width: 15rem;
+    height: 15rem;
+}
+
+#landing-page #landing-section .text-section {
+    padding: 3rem 2rem;
+
+}
+
+#landing-page #landing-section .text-section h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+#landing-page #landing-section .text-section h1 .hide-in-lg {
+    display: none;
+}
+
+#landing-page #landing-section .text-section h1 span {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-family: 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right,
+            #462523 0,
+            #cb9b51 22%,
+            #f6e27a 45%,
+            #f6f2c0 50%,
+            #f6e27a 55%,
+            #cb9b51 78%,
+            #462523 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+#landing-page #landing-section .text-section h4 {
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+#landing-page #landing-section .text-section .button-div {
+    position: absolute;
+    z-index: 3;
+}
+
+#landing-page #landing-section .text-section button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    color: goldenrod;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#landing-page #landing-section .text-section button h6 {
+    z-index: 2;
+    position: inherit;
+    font-size: 15px;
+}
+
+#landing-page #landing-section .text-section button span {
+    background: #fff;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#landing-page #landing-section .text-section button:hover span {
+    width: 100%;
+}
+
+
+
+
+
+#upcoming-events {
+    padding: 2.5rem 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#upcoming-events h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem;
+}
+
+#upcoming-events p {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+#upcoming-events .images-display {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: flex-start;
+}
+
+
+/* #upcoming-events .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+} */
+
+/* Create four equal columns that sits next to each other */
+/* #upcoming-events .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+#upcoming-events .column .gallery {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+} */
+
+#upcoming-events div.desc {
+    padding: 15px;
+    text-align: center;
+}
+#upcoming-events .buttons-div{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+#upcoming-events .to-s-event{
+    background-color: #fff;
+    color: #000;
+    padding: 0.5rem 0.25rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+}
+#upcoming-events .to-paybox{
+    background-color: #fff;
+    color: #000;
+    padding: 0.5rem 0.25rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+    z-index: 2;
+    
+}
+
+
+
+
+/*  */
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2.5rem 5rem;
+    /* background-color: #000; */
+    color: #fff;
+    background-image: url(../../images/background-inverted.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+footer .col-1 {
+    width: 40%;
+    padding-right: 1.5rem;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+    width: 80%;
+    height: auto;
+    
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    margin: 0 0 8px 0;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #fff;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img {
+    border: 1px solid #00DFA2;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover, a:hover {
+    color: goldenrod;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*/////////////////////////////// RESPONSIVE ////////////////////////////*/
+@media only screen and (max-width: 769px) {
+    #landing-page #menu-section {
+        padding-top: 5rem;
+    }
+
+    #landing-page #menu-section ul li a {
+        font-size: 1.75rem;
+    }
+
+
+    #landing-page #landing-section {
+        padding: 10rem 5rem;
+        display: block;
+    }
+
+    #landing-page #landing-section .logo-section {
+        float: left;
+    }
+
+    #landing-page #landing-section .logo-section img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+
+    #landing-page #landing-section .text-section {
+        display: inline;
+    }
+
+    #landing-page #landing-section .text-section h1 {
+        font-size: 5rem;
+    }
+
+    #landing-page #landing-section .text-section h1 .hide-in-sm {
+        display: none;
+    }
+
+    #landing-page #landing-section .text-section h1 .show-in-sm {
+        display: block;
+    }
+
+    #landing-page #landing-section .text-section h1 span {
+        font-size: 5rem;
+    }
+
+    #landing-page #landing-section .text-section h4 {
+        font-size: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    #landing-page #landing-section .text-section .button-div {
+        position: inherit;
+        text-align: center;
+    }
+
+    #landing-page #landing-section .text-section button h6 {
+        font-size: 1.5rem;
+    }
+
+    /* Mid-responsive : UPCOMING EVENTS */
+    #upcoming-events h1 {
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+
+    #upcoming-events p {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    #upcoming-events .images-display {
+        flex-direction: column;
+    }
+
+    
+
+    footer .col-1 {
+        width: 100%;
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* footer{
+        height: 70vh;
+    } */
+
+    footer .footer-pay-img {
+        width: 100%;
+    }
+
+    /* Market Page Responsive */
+    #landing-page.mkt-landing #banner h1 {
+        padding: 12rem 2rem 5rem 2rem;
+        font-size: 3rem;
+    }
+
+    /* Contact Page Responsive */
+    #landing-page.contact-landing #banner h1 {
+        padding: 10rem 2rem 5rem 2rem;
+        font-size: 2.5rem;
+    }
+
+    #newsletter {
+        /* margin: 0 35px; */
+        height: 30vh;
+    }
+
+    #newsletter .form {
+        width: 70%;
+    }
+
+    #newsletter input {
+        width: 100%;
+    }
+
+    #form-details {
+        padding: 40px;
+    }
+
+    #form-details form {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #landing-page #landing-section {
+        padding: 7rem 5rem;
+        display: block;
+    }
+
+    #landing-page #landing-section .logo-section img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    #landing-page #landing-section .text-section h1 {
+        font-size: 3rem;
+    }
+
+    #landing-page #landing-section .text-section h1 span {
+        font-size: 3rem;
+    }
+
+    /* Contact page RESPONSIVE */
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #newsletter .newstext{
+        margin-bottom: 0.5rem;
+    }
+
+    /* Single-Event Responsive */
+    #s-event-landing {
+        flex-direction: column;
+    }
+    #s-event-landing .event-details {
+        width: 100%;
+    }
+    #s-event-landing .poster-div {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+    #landing-page #menu-section {
+        padding-top: 4rem;
+    }
+
+    #landing-page #menu-section ul li {
+        margin: 0 1.5rem;
+    }
+
+    #landing-page #menu-section ul li a {
+        font-size: 1.5rem;
+    }
+
+    #landing-page #landing-section {
+        padding: 14rem 2rem 10rem 2rem;
+        display: block;
+    }
+
+    #landing-page #landing-section .logo-section {
+        padding: 0 2rem 0 0;
+
+    }
+
+    #landing-page #landing-section .logo-section img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    #landing-page #landing-section .text-section h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    #landing-page #landing-section .text-section h1 span {
+        font-size: 2.5rem;
+    }
+
+    #landing-page #landing-section .text-section h4 {
+        font-size: 1rem;
+        padding: 1.2rem;
+        text-align: center;
+    }
+
+    #landing-page #landing-section .text-section button h6 {
+        font-size: 1rem;
+    }
+
+
+    #upcoming-events {
+        padding: 2.5rem 2rem;
+    }
+
+    #upcoming-events h1 {
+        margin-top: 0;
+    }
+
+
+    footer {
+        padding: 2.5rem 2rem;
+    }
+
+    footer h4 {
+        font-size: 17px;
+        padding-bottom: 15px;
+    }
+
+    footer p {
+        font-size: 17px;
+        margin: 0 0 8px 0;
+    }
+
+    footer .col {
+        align-items: center;
+
+    }
+
+    footer div.col.col2 {
+        width: 40%;
+    }
+
+    footer div.col.col3 {
+        width: 40%;
+    }
+
+    footer div.col.install {
+        width: 100%;
+    }
+
+    footer .install img {
+        margin: 10px 0 15px 0;
+        width: 270px;
+        height: 270px;
+    }
+
+    /* Mkt page responsive sm */
+
+    #landing-page.mkt-landing #banner h1 {
+        padding: 10rem 2rem 5rem 2rem;
+        font-size: 2rem;
+    }
+
+    /* Contact Page Responsive */
+    #buy-me-kahawa {
+        padding: 2rem 0;
+    }
+
+    #newsletter {
+        padding: 40px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

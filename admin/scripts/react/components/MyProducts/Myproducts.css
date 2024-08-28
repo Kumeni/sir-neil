@@ -1,0 +1,12 @@
+.my-product-list{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+
+.my-product-list{
+    grid-template-columns: repeat(4, 23%);
+    column-gap:0.5rem;
+    justify-content: center;
+    margin-bottom:5rem;
+}
